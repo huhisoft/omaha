@@ -64,7 +64,7 @@ CString GuidToFriendlyAppName(const GUID& guid) {
   // to customers.
   MapGuidToName guid_to_name[] = {
     {_T("{283EAF47-8817-4c2b-A801-AD1FADFB7BAA}"), _T("Gears")},
-    {_T("{B131C935-9BE6-41DA-9599-1F776BEB8019}"), _T("Brave Update")},
+    {_T("{B131C935-9BE6-41DA-9599-1F776BEB8019}"), _T("Huhi Update")},
     {_T("{8A69D345-D564-463C-AFF1-A69D9E530F96}"), _T("Chrome")},
   };
 

@@ -2,7 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
  * You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-#include "omaha/common/brave_stats_updater.h"
+#include "omaha/common/huhi_stats_updater.h"
 
 #include "omaha/base/safe_format.h"
 #include "omaha/base/utils.h"
@@ -27,7 +27,7 @@ CString GetChannelName(const CString& app_guid) {
     return _T("");
 }
 
-CString GetBraveVersion(const CString& version) {
+CString GetHuhiVersion(const CString& version) {
   // Strip first segment from version number.
   int pos = version.Find(_T('.'));
   if (pos != -1)
@@ -37,14 +37,14 @@ CString GetBraveVersion(const CString& version) {
 
 }  // namespace
 
-HRESULT BraveSendStatsPing(const CString& event, const CString& app_guid,
+HRESULT HuhiSendStatsPing(const CString& event, const CString& app_guid,
                            const CString& referral_code,
                            const CString& version) {
   // Retrieve the update server name.
   CString update_server =
-      omaha::GetEnvironmentVariableAsString(_T("BRAVE_UPDATE_SERVER"));
+      omaha::GetEnvironmentVariableAsString(_T("HUHI_UPDATE_SERVER"));
   if (update_server.IsEmpty())
-    update_server = _T("laptop-updates.brave.com");
+    update_server = _T("laptop-updates.huhi.com");
 
   _SYSTEM_INFO system_info = {};
   ::GetNativeSystemInfo(&system_info);
@@ -66,7 +66,7 @@ HRESULT BraveSendStatsPing(const CString& event, const CString& app_guid,
       system_info.wProcessorArchitecture == PROCESSOR_ARCHITECTURE_INTEL
           ? _T("winia32-bc")
           : _T("winx64-bc"),
-      GetBraveVersion(version), channel_name, referral_code, event);
+      GetHuhiVersion(version), channel_name, referral_code, event);
 
   omaha::NetworkConfig* network_config = NULL;
   omaha::NetworkConfigManager& network_manager =

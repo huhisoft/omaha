@@ -86,7 +86,7 @@ HRESULT HelpUrlBuilder::BuildUrl(const std::vector<AppResult>& app_results,
     return hr;
   }
 
-  *help_url = _T("https://support.brave.com/");
+  *help_url = _T("https://support.huhi.com/");
 
   return S_OK;
 }

@@ -92,6 +92,6 @@ env.Depends(
         ],
     dependency = [
         '%s/%s' % (clickonce_deploy_bin_dir, clickonce_binary),
-        '%s/BraveUpdateSetup.exe' % (clickonce_deploy_bin_dir),
+        '%s/HuhiUpdateSetup.exe' % (clickonce_deploy_bin_dir),
         ]
 )

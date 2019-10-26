@@ -214,8 +214,8 @@ def GetAllSetupExeInDirectory(dir):
   ret_files = []
   files = os.listdir(dir)
   for file in files:
-    regex = re.compile('^TEST_BraveUpdateSetup_.*.exe$|'
-                       '^BraveUpdateSetup_.*.exe$')
+    regex = re.compile('^TEST_HuhiUpdateSetup_.*.exe$|'
+                       '^HuhiUpdateSetup_.*.exe$')
     if not regex.match(file):
       continue
     ret_files.append(file)

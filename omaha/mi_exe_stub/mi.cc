@@ -56,8 +56,8 @@
 #include "omaha/base/scoped_any.h"
 #include "omaha/base/system_info.h"
 #include "omaha/base/utils.h"
-#include "omaha/common/brave_referral_code_utils.h"
-#include "omaha/common/brave_stats_updater.h"
+#include "omaha/common/huhi_referral_code_utils.h"
+#include "omaha/common/huhi_stats_updater.h"
 #include "omaha/common/const_cmd_line.h"
 #include "omaha/mi_exe_stub/process.h"
 #include "omaha/mi_exe_stub/mi.grh"
@@ -236,7 +236,7 @@ class MetaInstaller {
         const int silent_tag_len = silent_tag.GetLength();
         // If tag has silent tag, append \silent \install to command line.
         // Also silent tag is removed from tag list and assign it to |tag|
-        // buffer again. silent tag isn't recognized by brave updater.
+        // buffer again. silent tag isn't recognized by huhi updater.
         if (original_tag.Right(silent_tag_len).CompareNoCase(silent_tag) == 0) {
           const CString revised_tag =
               original_tag.Left(original_tag.GetLength() - silent_tag_len);
@@ -699,7 +699,7 @@ HRESULT StorePathToRegForPromoCode(LPSTR lpCmdLine) {
   HKEY key;
   DWORD dw;
   if (RegCreateKeyEx(HKEY_CURRENT_USER,
-                     _T("Software\\BraveSoftware\\Promo"),
+                     _T("Software\\HuhiSoftware\\Promo"),
                      0,
                      NULL,
                      REG_OPTION_NON_VOLATILE,
@@ -756,7 +756,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR lpCmdLine, int) {
   const CString referral_code = omaha::GetReferralCodeFromModuleFileName();
   if (CString(lpCmdLine).IsEmpty()) {
     const CString app_guid = omaha::ReadAppGuidFromTag(hInstance);
-    hr = omaha::BraveSendStatsPing(_T("startup"), app_guid, referral_code,
+    hr = omaha::HuhiSendStatsPing(_T("startup"), app_guid, referral_code,
                                    _T(""));
   }
 

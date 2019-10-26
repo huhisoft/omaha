@@ -51,9 +51,9 @@ const TCHAR* const kQueryStringFormat =
 // Information about where to obtain Omaha info.
 // This must never change in Omaha.
 const TCHAR* const kRegValueProductVersion  = _T("pv");
-const TCHAR* const kRelativeGoopdateRegPath = _T("Software\\Brave\\Update\\");
+const TCHAR* const kRelativeGoopdateRegPath = _T("Software\\Huhi\\Update\\");
 const TCHAR* const kRelativeClientsGoopdateRegPath =
-    _T("Software\\Brave\\Update\\Clients\\")
+    _T("Software\\Huhi\\Update\\Clients\\")
     _T("{B131C935-9BE6-41DA-9599-1F776BEB8019}");
 
 // The UpdateDev registry value to override the Code Red url.
