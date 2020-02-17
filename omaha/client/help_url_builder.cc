@@ -86,7 +86,7 @@ HRESULT HelpUrlBuilder::BuildUrl(const std::vector<AppResult>& app_results,
     return hr;
   }
 
-  *help_url = _T("https://support.huhi.com/");
+  *help_url = _T("https://support.huhisoft.com/");
 
   return S_OK;
 }

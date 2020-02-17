@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 // ========================================================================
-.idea
+
 .p4config
 BRANCH_OWNERS
 omaha/common/omaha_customization_proxy_clsid.h

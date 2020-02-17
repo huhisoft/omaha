@@ -1,7 +1,7 @@
 # Omaha
 
 ## How to build ##
-See https://github.com/huhisoft/huhibrowser/wiki/Huhi-omaha
+See https://github.com/huhisoft/huhi-browser/wiki/Huhi-omaha
 
 ## This is not an official Google product. ##
 

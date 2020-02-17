@@ -44,7 +44,7 @@ HRESULT HuhiSendStatsPing(const CString& event, const CString& app_guid,
   CString update_server =
       omaha::GetEnvironmentVariableAsString(_T("HUHI_UPDATE_SERVER"));
   if (update_server.IsEmpty())
-    update_server = _T("laptop-updates.huhi.com");
+    update_server = _T("laptop-updates.huhisoft.com");
 
   _SYSTEM_INFO system_info = {};
   ::GetNativeSystemInfo(&system_info);
